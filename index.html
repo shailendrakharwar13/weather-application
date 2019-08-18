@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Arimo|Dosis"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/weather-icons.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="heading text-center">
+      <h2>
+        A Simple WebApp
+        <small
+          ><a
+            href="https://darksky.net/forecast/40.7127,-74.0059/us12/en"
+            target="_blank"
+            >Powered by Dark Sky</a
+          ></small
+        >
+      </h2>
+    </div>
+    <!--Main Card-->
+    <div class="main">
+      <div class="loader">
+        <div class="justify-content-center">
+          <div
+            class="spinner-border"
+            style="width: 5rem; height: 5rem;"
+            role="status"
+          >
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+      <div class="main-card mt-5 ">
+        <div class="card p-5">
+          <div class="image text-center display-1 p-3"></div>
+          <div class="card-body text-center">
+            <div class="">
+              <h2 class="card-title name"></h2>
+              <small class="date"></small>
+              <p class="card-text temp display-4" onclick="convert()"></p>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-md col-sm">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item desc"></li>
+                  <li class="list-group-item hum">Humidity:</li>
+                </ul>
+              </div>
+              <div class="col-md col-sm">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item pressure">Pressure:</li>
+                  <li class="list-group-item ozone">Ozone:</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+    <script src="appx.js"></script>
+  </body>
+</html>
